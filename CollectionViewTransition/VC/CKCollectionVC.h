@@ -1,5 +1,5 @@
 //
-//  CKViewController.h
+//  CKCollectionVC.h
 //  CollectionViewTransition
 //
 //  Created by Richard Lichkus on 8/12/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CKViewController : UIViewController
+@interface CKCollectionVC : UIViewController
 
 @end

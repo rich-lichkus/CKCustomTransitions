@@ -14,13 +14,16 @@
 		0F4EC0FA199B105E008FD299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC0F9199B105E008FD299 /* main.m */; };
 		0F4EC0FE199B105E008FD299 /* CKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC0FD199B105E008FD299 /* CKAppDelegate.m */; };
 		0F4EC101199B105E008FD299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EC0FF199B105E008FD299 /* Main.storyboard */; };
-		0F4EC104199B105F008FD299 /* CKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC103199B105F008FD299 /* CKViewController.m */; };
 		0F4EC106199B105F008FD299 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EC105199B105F008FD299 /* Images.xcassets */; };
 		0F4EC10D199B105F008FD299 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4EC10C199B105F008FD299 /* XCTest.framework */; };
 		0F4EC10E199B105F008FD299 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4EC0ED199B105E008FD299 /* Foundation.framework */; };
 		0F4EC10F199B105F008FD299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4EC0F1199B105E008FD299 /* UIKit.framework */; };
 		0F4EC117199B105F008FD299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EC115199B105F008FD299 /* InfoPlist.strings */; };
 		0F4EC119199B105F008FD299 /* CollectionViewTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC118199B105F008FD299 /* CollectionViewTransitionTests.m */; };
+		0F4EC128199B1118008FD299 /* CKCollectionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC127199B1118008FD299 /* CKCollectionDetailVC.m */; };
+		0F4EC12D199B115A008FD299 /* CKCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC12C199B115A008FD299 /* CKCollectionVC.m */; };
+		0FF16A75199B1EF700F96F0F /* CKTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16A74199B1EF700F96F0F /* CKTransitionDelegate.m */; };
+		0FF16A78199B1FA800F96F0F /* CKAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16A77199B1FA800F96F0F /* CKAnimatedTransitioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,25 +37,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F4EC0EA199B105E008FD299 /* CollectionViewTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4EC0EA199B105E008FD299 /* CKCustomTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKCustomTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4EC0ED199B105E008FD299 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0F4EC0EF199B105E008FD299 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0F4EC0F1199B105E008FD299 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0F4EC0F5199B105E008FD299 /* CollectionViewTransition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewTransition-Info.plist"; sourceTree = "<group>"; };
+		0F4EC0F5199B105E008FD299 /* CKCustomTransitions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CKCustomTransitions-Info.plist"; sourceTree = "<group>"; };
 		0F4EC0F7199B105E008FD299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F4EC0F9199B105E008FD299 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0F4EC0FB199B105E008FD299 /* CollectionViewTransition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollectionViewTransition-Prefix.pch"; sourceTree = "<group>"; };
+		0F4EC0FB199B105E008FD299 /* CKCustomTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CKCustomTransitions-Prefix.pch"; sourceTree = "<group>"; };
 		0F4EC0FC199B105E008FD299 /* CKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKAppDelegate.h; sourceTree = "<group>"; };
 		0F4EC0FD199B105E008FD299 /* CKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKAppDelegate.m; sourceTree = "<group>"; };
 		0F4EC100199B105E008FD299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0F4EC102199B105E008FD299 /* CKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKViewController.h; sourceTree = "<group>"; };
-		0F4EC103199B105F008FD299 /* CKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKViewController.m; sourceTree = "<group>"; };
 		0F4EC105199B105F008FD299 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0F4EC10B199B105F008FD299 /* CollectionViewTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4EC10B199B105F008FD299 /* CKCustomTransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKCustomTransitionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4EC10C199B105F008FD299 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0F4EC114199B105F008FD299 /* CollectionViewTransitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewTransitionTests-Info.plist"; sourceTree = "<group>"; };
+		0F4EC114199B105F008FD299 /* CKCustomTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CKCustomTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		0F4EC116199B105F008FD299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F4EC118199B105F008FD299 /* CollectionViewTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewTransitionTests.m; sourceTree = "<group>"; };
+		0F4EC126199B1118008FD299 /* CKCollectionDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCollectionDetailVC.h; path = VC/CKCollectionDetailVC.h; sourceTree = "<group>"; };
+		0F4EC127199B1118008FD299 /* CKCollectionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCollectionDetailVC.m; path = VC/CKCollectionDetailVC.m; sourceTree = "<group>"; };
+		0F4EC12B199B115A008FD299 /* CKCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCollectionVC.h; path = VC/CKCollectionVC.h; sourceTree = "<group>"; };
+		0F4EC12C199B115A008FD299 /* CKCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCollectionVC.m; path = VC/CKCollectionVC.m; sourceTree = "<group>"; };
+		0FF16A73199B1EF700F96F0F /* CKTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKTransitionDelegate.h; path = Delegate/CKTransitionDelegate.h; sourceTree = "<group>"; };
+		0FF16A74199B1EF700F96F0F /* CKTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKTransitionDelegate.m; path = Delegate/CKTransitionDelegate.m; sourceTree = "<group>"; };
+		0FF16A76199B1FA800F96F0F /* CKAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKAnimatedTransitioning.h; path = Delegate/CKAnimatedTransitioning.h; sourceTree = "<group>"; };
+		0FF16A77199B1FA800F96F0F /* CKAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKAnimatedTransitioning.m; path = Delegate/CKAnimatedTransitioning.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +101,8 @@
 		0F4EC0EB199B105E008FD299 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F4EC0EA199B105E008FD299 /* CollectionViewTransition.app */,
-				0F4EC10B199B105F008FD299 /* CollectionViewTransitionTests.xctest */,
+				0F4EC0EA199B105E008FD299 /* CKCustomTransitions.app */,
+				0F4EC10B199B105F008FD299 /* CKCustomTransitionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +124,10 @@
 				0F4EC0FC199B105E008FD299 /* CKAppDelegate.h */,
 				0F4EC0FD199B105E008FD299 /* CKAppDelegate.m */,
 				0F4EC0FF199B105E008FD299 /* Main.storyboard */,
-				0F4EC102199B105E008FD299 /* CKViewController.h */,
-				0F4EC103199B105F008FD299 /* CKViewController.m */,
-				0F4EC105199B105F008FD299 /* Images.xcassets */,
+				0F4EC125199B10F9008FD299 /* Collection VC */,
+				0F4EC129199B1124008FD299 /* DetailVC */,
+				0FF16A79199BCC9500F96F0F /* Custom Transition */,
+				0F4EC12E199B12C7008FD299 /* Media */,
 				0F4EC0F4199B105E008FD299 /* Supporting Files */,
 			);
 			path = CollectionViewTransition;
@@ -126,10 +136,10 @@
 		0F4EC0F4199B105E008FD299 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F4EC0F5199B105E008FD299 /* CollectionViewTransition-Info.plist */,
+				0F4EC0F5199B105E008FD299 /* CKCustomTransitions-Info.plist */,
 				0F4EC0F6199B105E008FD299 /* InfoPlist.strings */,
 				0F4EC0F9199B105E008FD299 /* main.m */,
-				0F4EC0FB199B105E008FD299 /* CollectionViewTransition-Prefix.pch */,
+				0F4EC0FB199B105E008FD299 /* CKCustomTransitions-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,18 +156,63 @@
 		0F4EC113199B105F008FD299 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F4EC114199B105F008FD299 /* CollectionViewTransitionTests-Info.plist */,
+				0F4EC114199B105F008FD299 /* CKCustomTransitionsTests-Info.plist */,
 				0F4EC115199B105F008FD299 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0F4EC125199B10F9008FD299 /* Collection VC */ = {
+			isa = PBXGroup;
+			children = (
+				0F4EC12B199B115A008FD299 /* CKCollectionVC.h */,
+				0F4EC12C199B115A008FD299 /* CKCollectionVC.m */,
+			);
+			name = "Collection VC";
+			sourceTree = "<group>";
+		};
+		0F4EC129199B1124008FD299 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F4EC126199B1118008FD299 /* CKCollectionDetailVC.h */,
+				0F4EC127199B1118008FD299 /* CKCollectionDetailVC.m */,
+			);
+			name = DetailVC;
+			sourceTree = "<group>";
+		};
+		0F4EC12E199B12C7008FD299 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				0F4EC105199B105F008FD299 /* Images.xcassets */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		0F542AE9199BF24900A8792A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0FF16A76199B1FA800F96F0F /* CKAnimatedTransitioning.h */,
+				0FF16A77199B1FA800F96F0F /* CKAnimatedTransitioning.m */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
+		0FF16A79199BCC9500F96F0F /* Custom Transition */ = {
+			isa = PBXGroup;
+			children = (
+				0FF16A73199B1EF700F96F0F /* CKTransitionDelegate.h */,
+				0FF16A74199B1EF700F96F0F /* CKTransitionDelegate.m */,
+				0F542AE9199BF24900A8792A /* Animations */,
+			);
+			name = "Custom Transition";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F4EC0E9199B105E008FD299 /* CollectionViewTransition */ = {
+		0F4EC0E9199B105E008FD299 /* CKCustomTransitions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F4EC11C199B105F008FD299 /* Build configuration list for PBXNativeTarget "CollectionViewTransition" */;
+			buildConfigurationList = 0F4EC11C199B105F008FD299 /* Build configuration list for PBXNativeTarget "CKCustomTransitions" */;
 			buildPhases = (
 				0F4EC0E6199B105E008FD299 /* Sources */,
 				0F4EC0E7199B105E008FD299 /* Frameworks */,
@@ -167,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = CollectionViewTransition;
+			name = CKCustomTransitions;
 			productName = CollectionViewTransition;
-			productReference = 0F4EC0EA199B105E008FD299 /* CollectionViewTransition.app */;
+			productReference = 0F4EC0EA199B105E008FD299 /* CKCustomTransitions.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F4EC10A199B105F008FD299 /* CollectionViewTransitionTests */ = {
+		0F4EC10A199B105F008FD299 /* CKCustomTransitionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F4EC11F199B105F008FD299 /* Build configuration list for PBXNativeTarget "CollectionViewTransitionTests" */;
+			buildConfigurationList = 0F4EC11F199B105F008FD299 /* Build configuration list for PBXNativeTarget "CKCustomTransitionsTests" */;
 			buildPhases = (
 				0F4EC107199B105F008FD299 /* Sources */,
 				0F4EC108199B105F008FD299 /* Frameworks */,
@@ -185,9 +240,9 @@
 			dependencies = (
 				0F4EC111199B105F008FD299 /* PBXTargetDependency */,
 			);
-			name = CollectionViewTransitionTests;
+			name = CKCustomTransitionsTests;
 			productName = CollectionViewTransitionTests;
-			productReference = 0F4EC10B199B105F008FD299 /* CollectionViewTransitionTests.xctest */;
+			productReference = 0F4EC10B199B105F008FD299 /* CKCustomTransitionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F4EC0E5199B105E008FD299 /* Build configuration list for PBXProject "CollectionViewTransition" */;
+			buildConfigurationList = 0F4EC0E5199B105E008FD299 /* Build configuration list for PBXProject "CKCustomTransitions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,8 +273,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F4EC0E9199B105E008FD299 /* CollectionViewTransition */,
-				0F4EC10A199B105F008FD299 /* CollectionViewTransitionTests */,
+				0F4EC0E9199B105E008FD299 /* CKCustomTransitions */,
+				0F4EC10A199B105F008FD299 /* CKCustomTransitionsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,8 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4EC0FE199B105E008FD299 /* CKAppDelegate.m in Sources */,
+				0FF16A75199B1EF700F96F0F /* CKTransitionDelegate.m in Sources */,
 				0F4EC0FA199B105E008FD299 /* main.m in Sources */,
-				0F4EC104199B105F008FD299 /* CKViewController.m in Sources */,
+				0F4EC12D199B115A008FD299 /* CKCollectionVC.m in Sources */,
+				0FF16A78199B1FA800F96F0F /* CKAnimatedTransitioning.m in Sources */,
+				0F4EC128199B1118008FD299 /* CKCollectionDetailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +327,7 @@
 /* Begin PBXTargetDependency section */
 		0F4EC111199B105F008FD299 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F4EC0E9199B105E008FD299 /* CollectionViewTransition */;
+			target = 0F4EC0E9199B105E008FD299 /* CKCustomTransitions */;
 			targetProxy = 0F4EC110199B105F008FD299 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -378,9 +436,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CollectionViewTransition/CollectionViewTransition-Prefix.pch";
-				INFOPLIST_FILE = "CollectionViewTransition/CollectionViewTransition-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CollectionViewTransition/CKCustomTransitions-Prefix.pch";
+				INFOPLIST_FILE = "CollectionViewTransition/CKCustomTransitions-Info.plist";
+				PRODUCT_NAME = CKCustomTransitions;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,9 +449,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CollectionViewTransition/CollectionViewTransition-Prefix.pch";
-				INFOPLIST_FILE = "CollectionViewTransition/CollectionViewTransition-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CollectionViewTransition/CKCustomTransitions-Prefix.pch";
+				INFOPLIST_FILE = "CollectionViewTransition/CKCustomTransitions-Info.plist";
+				PRODUCT_NAME = CKCustomTransitions;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -413,8 +471,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CollectionViewTransitionTests/CollectionViewTransitionTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CollectionViewTransitionTests/CKCustomTransitionsTests-Info.plist";
+				PRODUCT_NAME = CKCustomTransitionsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -431,8 +489,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CollectionViewTransition/CollectionViewTransition-Prefix.pch";
-				INFOPLIST_FILE = "CollectionViewTransitionTests/CollectionViewTransitionTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CollectionViewTransitionTests/CKCustomTransitionsTests-Info.plist";
+				PRODUCT_NAME = CKCustomTransitionsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -441,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F4EC0E5199B105E008FD299 /* Build configuration list for PBXProject "CollectionViewTransition" */ = {
+		0F4EC0E5199B105E008FD299 /* Build configuration list for PBXProject "CKCustomTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F4EC11A199B105F008FD299 /* Debug */,
@@ -450,21 +508,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F4EC11C199B105F008FD299 /* Build configuration list for PBXNativeTarget "CollectionViewTransition" */ = {
+		0F4EC11C199B105F008FD299 /* Build configuration list for PBXNativeTarget "CKCustomTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F4EC11D199B105F008FD299 /* Debug */,
 				0F4EC11E199B105F008FD299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0F4EC11F199B105F008FD299 /* Build configuration list for PBXNativeTarget "CollectionViewTransitionTests" */ = {
+		0F4EC11F199B105F008FD299 /* Build configuration list for PBXNativeTarget "CKCustomTransitionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F4EC120199B105F008FD299 /* Debug */,
 				0F4EC121199B105F008FD299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

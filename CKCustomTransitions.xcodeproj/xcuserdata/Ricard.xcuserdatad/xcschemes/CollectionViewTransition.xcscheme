@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F4EC0E9199B105E008FD299"
-               BuildableName = "CollectionViewTransition.app"
-               BlueprintName = "CollectionViewTransition"
-               ReferencedContainer = "container:CollectionViewTransition.xcodeproj">
+               BuildableName = "CKCustomTransitions.app"
+               BlueprintName = "CKCustomTransitions"
+               ReferencedContainer = "container:CKCustomTransitions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F4EC10A199B105F008FD299"
-               BuildableName = "CollectionViewTransitionTests.xctest"
-               BlueprintName = "CollectionViewTransitionTests"
-               ReferencedContainer = "container:CollectionViewTransition.xcodeproj">
+               BuildableName = "CKCustomTransitionsTests.xctest"
+               BlueprintName = "CKCustomTransitionsTests"
+               ReferencedContainer = "container:CKCustomTransitions.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4EC0E9199B105E008FD299"
-            BuildableName = "CollectionViewTransition.app"
-            BlueprintName = "CollectionViewTransition"
-            ReferencedContainer = "container:CollectionViewTransition.xcodeproj">
+            BuildableName = "CKCustomTransitions.app"
+            BlueprintName = "CKCustomTransitions"
+            ReferencedContainer = "container:CKCustomTransitions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4EC0E9199B105E008FD299"
-            BuildableName = "CollectionViewTransition.app"
-            BlueprintName = "CollectionViewTransition"
-            ReferencedContainer = "container:CollectionViewTransition.xcodeproj">
+            BuildableName = "CKCustomTransitions.app"
+            BlueprintName = "CKCustomTransitions"
+            ReferencedContainer = "container:CKCustomTransitions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4EC0E9199B105E008FD299"
-            BuildableName = "CollectionViewTransition.app"
-            BlueprintName = "CollectionViewTransition"
-            ReferencedContainer = "container:CollectionViewTransition.xcodeproj">
+            BuildableName = "CKCustomTransitions.app"
+            BlueprintName = "CKCustomTransitions"
+            ReferencedContainer = "container:CKCustomTransitions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
