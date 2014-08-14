@@ -8,11 +8,8 @@ CKCustomTransitions
 
 Overview
 --------
-* This project demonstrates how to implement custom transitions.
+* This project demonstrates how to implement custom transition between a collection view cell and a detail view controller. This style of animation can be found in the iOS Photos app when a photo is selected.
 
-Known Issues
-------------
-* Working on scale animation
 
 Future Features
 ----------------

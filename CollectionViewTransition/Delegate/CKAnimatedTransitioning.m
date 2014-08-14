@@ -9,7 +9,7 @@
 #import "CKAnimatedTransitioning.h"
 #import "CKCollectionDetailVC.h"
 
-static NSTimeInterval const CKAnimatedTransitionDuration = .5f;
+static NSTimeInterval const CKAnimatedTransitionDuration = 2.0f;
 
 @implementation CKAnimatedTransitioning
 
