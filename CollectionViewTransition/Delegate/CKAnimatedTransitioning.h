@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CKCollectionViewCell.h"
 
 @interface CKAnimatedTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic) BOOL reverse;
 @property (nonatomic) CGRect collectionCellFrame;
 @property (nonatomic) CGRect imgViewFrame;
-@property (strong, nonatomic) UICollectionViewCell *selectedCell;
+@property (strong, nonatomic) CKCollectionViewCell *selectedCell;
 @end

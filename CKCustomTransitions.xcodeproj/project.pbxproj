@@ -24,6 +24,7 @@
 		0F4EC12D199B115A008FD299 /* CKCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4EC12C199B115A008FD299 /* CKCollectionVC.m */; };
 		0FF16A75199B1EF700F96F0F /* CKTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16A74199B1EF700F96F0F /* CKTransitionDelegate.m */; };
 		0FF16A78199B1FA800F96F0F /* CKAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16A77199B1FA800F96F0F /* CKAnimatedTransitioning.m */; };
+		0FF92FF5199C65E500C6C0D8 /* CKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF92FF4199C65E500C6C0D8 /* CKCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		0FF16A74199B1EF700F96F0F /* CKTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKTransitionDelegate.m; path = Delegate/CKTransitionDelegate.m; sourceTree = "<group>"; };
 		0FF16A76199B1FA800F96F0F /* CKAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKAnimatedTransitioning.h; path = Delegate/CKAnimatedTransitioning.h; sourceTree = "<group>"; };
 		0FF16A77199B1FA800F96F0F /* CKAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKAnimatedTransitioning.m; path = Delegate/CKAnimatedTransitioning.m; sourceTree = "<group>"; };
+		0FF92FF3199C65E500C6C0D8 /* CKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCollectionViewCell.h; path = VC/CKCollectionViewCell.h; sourceTree = "<group>"; };
+		0FF92FF4199C65E500C6C0D8 /* CKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCollectionViewCell.m; path = VC/CKCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,7 @@
 			children = (
 				0F4EC126199B1118008FD299 /* CKCollectionDetailVC.h */,
 				0F4EC127199B1118008FD299 /* CKCollectionDetailVC.m */,
+				0FF92FF2199C65BD00C6C0D8 /* CollectionCell */,
 			);
 			name = DetailVC;
 			sourceTree = "<group>";
@@ -205,6 +209,15 @@
 				0F542AE9199BF24900A8792A /* Animations */,
 			);
 			name = "Custom Transition";
+			sourceTree = "<group>";
+		};
+		0FF92FF2199C65BD00C6C0D8 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FF92FF3199C65E500C6C0D8 /* CKCollectionViewCell.h */,
+				0FF92FF4199C65E500C6C0D8 /* CKCollectionViewCell.m */,
+			);
+			name = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF92FF5199C65E500C6C0D8 /* CKCollectionViewCell.m in Sources */,
 				0F4EC0FE199B105E008FD299 /* CKAppDelegate.m in Sources */,
 				0FF16A75199B1EF700F96F0F /* CKTransitionDelegate.m in Sources */,
 				0F4EC0FA199B105E008FD299 /* main.m in Sources */,

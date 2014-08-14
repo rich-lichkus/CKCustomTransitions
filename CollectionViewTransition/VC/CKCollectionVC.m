@@ -9,6 +9,7 @@
 #import "CKCollectionVC.h"
 #import "CKCollectionDetailVC.h"
 #import "CKAnimatedTransitioning.h"
+#import "CKCollectionViewCell.h"
 
 @interface CKCollectionVC () <UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
 
@@ -56,11 +57,9 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"customCell" forIndexPath:indexPath];
+    CKCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"customCell" forIndexPath:indexPath];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.bounds];
-    imageView.image = [UIImage imageNamed:@"profile"];
-    [cell addSubview:imageView];
+    cell.imgAvatar.image = [UIImage imageNamed:@"profile"];
     
     return cell;
 }
@@ -76,7 +75,7 @@
     
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     CGRect selectedCellFrame = [cell.superview convertRect:cell.frame toView:self.view];
-    self.animationTransition.selectedCell = cell;
+    self.animationTransition.selectedCell = (CKCollectionViewCell*)cell;
     
     self.animationTransition.collectionCellFrame = selectedCellFrame;
     CKCollectionDetailVC *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];

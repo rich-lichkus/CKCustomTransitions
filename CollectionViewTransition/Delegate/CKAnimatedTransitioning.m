@@ -7,8 +7,9 @@
 //
 
 #import "CKAnimatedTransitioning.h"
+#import "CKCollectionDetailVC.h"
 
-static NSTimeInterval const CKAnimatedTransitionDuration = 2.0f;
+static NSTimeInterval const CKAnimatedTransitionDuration = .5f;
 
 @implementation CKAnimatedTransitioning
 
@@ -18,37 +19,62 @@ static NSTimeInterval const CKAnimatedTransitionDuration = 2.0f;
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *container = [transitionContext containerView];
     
-    CGRect toVCFrame = toViewController.view.frame;
-    CGRect imgViewFrame = CGRectMake(48, 96, 225, 233);
+    CGRect imgOverlayFrame;
+
+    // Detail VC
+    CKCollectionDetailVC *detailVC;
+    if(self.reverse){
+        if([fromViewController isKindOfClass:[CKCollectionDetailVC class]]){
+            detailVC = (CKCollectionDetailVC*)fromViewController;
+            detailVC.view.alpha = 1.0f;
+            [container addSubview:toViewController.view];
+            [container bringSubviewToFront:detailVC.view];
+        }
+        imgOverlayFrame = detailVC.imgAvatar.frame;
+//        imgOverlayFrame.origin.y -= 64;
+    } else {
+        if([toViewController isKindOfClass:[CKCollectionDetailVC class]]){
+            detailVC = (CKCollectionDetailVC*)toViewController;
+            detailVC.view.alpha = 0.0f;
+            [container addSubview:detailVC.view];
+        }
+        imgOverlayFrame = self.selectedCell.frame;
+        imgOverlayFrame.origin.y += 64;
+    }
     
-    if (self.reverse) {
-        [container insertSubview:toViewController.view belowSubview:fromViewController.view];
-        fromViewController.view.alpha = 0.0f;
-    }
-    else {
-        
-        toViewController.view.alpha = 0.0f;
-//        toViewController.view.transform = CGAffineTransformMakeScale(self.collectionCellFrame.size.width/toVCFrame.size.width, self.collectionCellFrame.size.height/toVCFrame.size.height);
-//        
-//        toViewController.view.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(self.collectionCellFrame.size.width/toVCFrame.size.width,
-//                                                                                             self.collectionCellFrame.size.height/toVCFrame.size.height),
-//                                                                  CGAffineTransformMakeTranslation(self.collectionCellFrame.origin.x,
-//                                                                                                   self.collectionCellFrame.origin.y));
-        
-        [container addSubview:toViewController.view];
-    }
+    detailVC.imgAvatar.hidden = YES;
+    self.selectedCell.hidden = YES;
+    
+    // Image View Overlay
+    UIImageView *imgOverlay = [[UIImageView alloc] initWithFrame:imgOverlayFrame];
+    imgOverlay.image = self.selectedCell.imgAvatar.image;
+    [container addSubview:imgOverlay];
+    
+    // Transformations
+    CGFloat scaleFactorX = self.collectionCellFrame.size.width/detailVC.imgAvatar.frame.size.width;
+    CGFloat scaleFactorY = self.collectionCellFrame.size.height/detailVC.imgAvatar.frame.size.height;
     
     [UIView animateKeyframesWithDuration:CKAnimatedTransitionDuration delay:0 options:0 animations:^{
         if (self.reverse) {
-            self.selectedCell.transform = CGAffineTransformInvert(CGAffineTransformMakeScale(225.0/self.collectionCellFrame.size.width, 233.0/self.collectionCellFrame.size.height));
-        }
-        else {
-            self.selectedCell.transform = CGAffineTransformMakeTranslation(48-self.collectionCellFrame.origin.x, 96-self.collectionCellFrame.origin.y);
-            self.selectedCell.transform = CGAffineTransformMakeScale(225.0/self.collectionCellFrame.size.width, 233.0/self.collectionCellFrame.size.height);
-
+            detailVC.view.alpha = 0.0f;
+            imgOverlay.center = CGPointMake(self.selectedCell.frame.size.width*.5+self.selectedCell.frame.origin.x,
+                                            self.selectedCell.frame.size.height*.5+self.selectedCell.frame.origin.y+64);
+            imgOverlay.transform = CGAffineTransformMakeScale(scaleFactorX, scaleFactorY);
+        } else {
+            detailVC.view.alpha =1.0f;
+            imgOverlay.center = CGPointMake(detailVC.imgAvatar.frame.size.width*.5+detailVC.imgAvatar.frame.origin.x,
+                                            detailVC.imgAvatar.frame.size.height*.5+detailVC.imgAvatar.frame.origin.y);
+            imgOverlay.transform = CGAffineTransformMakeScale(1/scaleFactorX, 1/scaleFactorY);
+            
         }
     } completion:^(BOOL finished) {
-        toViewController.view.alpha = 1.0f;
+        if(self.reverse){
+            self.selectedCell.hidden = NO;
+        } else {
+            detailVC.imgAvatar.hidden = NO;
+            detailVC.imgAvatar.image = imgOverlay.image;
+        }
+        [imgOverlay removeFromSuperview];
         [transitionContext completeTransition:finished];
     }];
 }

@@ -35,6 +35,8 @@
     [self configureUIElements];
     
     [self configureTransistion];
+    
+    NSLog(@"%@", NSStringFromCGRect(self.imgAvatar.frame));
 }
 
 #pragma mark - Configuration
